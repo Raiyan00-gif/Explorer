@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="ParticlesMaterial" id=1]
+lifetime_randomness = 0.16
+flag_disable_z = true
+gravity = Vector3( 0, 0, 0 )
+orbit_velocity = -0.01
+orbit_velocity_random = 0.0
+
+[node name="Particles2D" type="Particles2D"]
+amount = 150
+lifetime = 1.5
+speed_scale = 3.94
+explosiveness = 1.0
+process_material = SubResource( 1 )

@@ -1,0 +1,86 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Assets/platformer_overLayer/3551455d5f80e2835fb15d98222346aa.jpg" type="Texture" id=1]
+[ext_resource path="res://Assets/more fonts/KiriFont.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Home.gd" type="Script" id=3]
+[ext_resource path="res://Assets/New folder/PNG/menu/about.png" type="Texture" id=4]
+[ext_resource path="res://Assets/fonts/BalsamiqSans-Bold.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://Assets/New folder/PNG/menu/play.png" type="Texture" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 200
+outline_size = 20
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 300
+outline_size = 40
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 5 )
+
+[node name="Home" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 23.0
+margin_top = 114.0
+margin_right = 23.0
+margin_bottom = 114.0
+script = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -15, -88 )
+scale = Vector2( 0.534896, 0.626852 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="Title" type="Label" parent="."]
+margin_left = 205.0
+margin_top = 102.0
+margin_right = 1373.0
+margin_bottom = 313.0
+rect_scale = Vector2( 0.5, 0.5 )
+custom_colors/font_color = Color( 0.462745, 0.921569, 0.541176, 1 )
+custom_colors/font_outline_modulate = Color( 0.0470588, 0.886275, 0.12549, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Explorer"
+
+[node name="ButtonPlay" type="Button" parent="."]
+margin_left = 422.0
+margin_top = 239.0
+margin_right = 932.0
+margin_bottom = 745.0
+rect_scale = Vector2( 0.3, 0.3 )
+icon = ExtResource( 6 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonHelp" type="Button" parent="."]
+margin_left = 907.0
+margin_top = -53.0
+margin_right = 1219.0
+margin_bottom = 254.0
+rect_scale = Vector2( 0.3, 0.3 )
+icon = ExtResource( 4 )
+flat = true
+
+[node name="ButtonEXit" type="Button" parent="."]
+margin_left = 445.0
+margin_top = 478.0
+margin_right = 958.0
+margin_bottom = 844.0
+rect_scale = Vector2( 0.2, 0.2 )
+custom_colors/font_color = Color( 0.882353, 0.0823529, 0.0823529, 1 )
+custom_colors/font_color_hover = Color( 0.160784, 0.0470588, 0.0470588, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Exit"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="ButtonPlay" to="." method="_on_ButtonPlay_pressed"]
+[connection signal="pressed" from="ButtonHelp" to="." method="_on_ButtonHelp_pressed"]
+[connection signal="pressed" from="ButtonEXit" to="." method="_on_ButtonEXit_pressed"]

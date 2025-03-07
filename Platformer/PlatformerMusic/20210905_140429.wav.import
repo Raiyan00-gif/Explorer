@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/20210905_140429.wav-9f244ad58f78aa26a2e6b80d9e4d293e.sample"
+
+[deps]
+
+source_file="res://PlatformerMusic/20210905_140429.wav"
+dest_files=[ "res://.import/20210905_140429.wav-9f244ad58f78aa26a2e6b80d9e4d293e.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

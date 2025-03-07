@@ -1,0 +1,72 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Assets/more fonts/KiriFont.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Assets/New folder/setting.png" type="Texture" id=2]
+[ext_resource path="res://Assets/more fonts/Sniglet-Regular.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Assets/fonts/BalsamiqSans-Bold.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://Sound-Setting.gd" type="Script" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 30
+outline_size = 3
+outline_color = Color( 0.0352941, 1, 0.00392157, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 40
+outline_size = 5
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 30
+outline_size = 4
+outline_color = Color( 0.219608, 0.505882, 0.337255, 1 )
+font_data = ExtResource( 4 )
+
+[node name="SoundSetting" type="Sprite"]
+texture = ExtResource( 2 )
+centered = false
+script = ExtResource( 5 )
+
+[node name="Header" type="Label" parent="."]
+margin_left = 100.0
+margin_top = 109.0
+margin_right = 408.0
+margin_bottom = 150.0
+custom_colors/font_color = Color( 0.733333, 0.87451, 0.627451, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Sound-Setting"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sound" type="Label" parent="."]
+margin_left = 183.0
+margin_top = 166.0
+margin_right = 296.0
+margin_bottom = 217.0
+custom_colors/font_color = Color( 0.313726, 0.678431, 0.180392, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Sound"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ExitButton" type="Button" parent="."]
+margin_left = 200.0
+margin_top = 335.0
+margin_right = 277.0
+margin_bottom = 377.0
+custom_colors/font_color = Color( 0.196078, 1, 0, 1 )
+custom_colors/font_color_hover = Color( 0.384314, 0.0705882, 0.0705882, 1 )
+custom_colors/font_color_pressed = Color( 0.988235, 0.0980392, 0.0980392, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "EXIT"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="ExitButton" to="." method="_on_ExitButton_pressed"]
